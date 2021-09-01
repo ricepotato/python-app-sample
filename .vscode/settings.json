@@ -1,0 +1,11 @@
+{
+  "python.pythonPath": "python",
+  "python.envFile": "${workspaceFolder}/.env.vscode",
+  "python.analysis.autoSearchPaths": true,
+  "python.analysis.extraPaths": ["${workspaceFolder}/src/app"],
+  "python.testing.unittestArgs": ["-v", "-s", "./src", "-p", "test_*.py"],
+  "python.testing.pytestEnabled": false,
+  "python.testing.nosetestsEnabled": false,
+  "python.testing.unittestEnabled": true,
+  "python.testing.cwd": "${workspaceFolder}/src/app"
+}

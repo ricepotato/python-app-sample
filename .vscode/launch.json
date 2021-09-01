@@ -1,0 +1,24 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: main",
+      "type": "python",
+      "request": "launch",
+      "program": "main.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/src/app"
+    },
+    {
+      "name": "Python: unittest discover",
+      "type": "python",
+      "request": "launch",
+      "module": "unittest",
+      "args": ["discover", "src/tests"],
+      "env": { "PYTHONPATH": "${workspaceFolder}/src/app" }
+    }
+  ]
+}
