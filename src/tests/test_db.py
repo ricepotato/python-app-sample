@@ -5,12 +5,13 @@ from service.db import DBService, DoesNotExist, DuplicateEntry
 class DBTestCase(unittest.TestCase):
     def setUp(self):
         self.db = DBService()
+        self.db.add("sukjun", 19, "sukjun40@naver.com")
+        self.db.add("ricepotato", 21, "ricepotato40@gmail.com")
 
     def tearDown(self):
         pass
 
     def test_db_get_by_name(self):
-        self.db = DBService()
         user = self.db.get_by_name("sukjun")
         assert user["age"] == 19
 
@@ -18,7 +19,6 @@ class DBTestCase(unittest.TestCase):
             self.db.get_by_name("some name")
 
     def test_db_get_count(self):
-        self.db = DBService()
         assert self.db.get_count() == 2
         assert self.db.delete_all()
         assert self.db.get_count() == 0

@@ -36,6 +36,17 @@ class MailTask:
         return count
 
     def send_mail_to(self, send_to_name: str, title: str, content: str) -> bool:
+        """지정된 사용자에게 메일을 보낸다.
+
+        Args:
+          send_to_name (str): 사용자 이름
+          title (str): 메일 제목
+          content (str): 메일 내용
+
+        Returns:
+          메일 보낸 수
+
+        """
         try:
             user = self.services.db.get_by_name(send_to_name)
             return self.services.mail.send_mail(user["email"], title, content)

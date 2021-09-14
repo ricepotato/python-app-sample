@@ -20,21 +20,8 @@ class DBService:
     """ database service """
 
     def __init__(self):
-        self.current_id = 2
-        self.data = {
-            "sukjun": {
-                "id": 1,
-                "name": "sukjun",
-                "age": 19,
-                "email": "sukjun40@naver.com",
-            },
-            "ricepotato": {
-                "id": 2,
-                "name": "ricepotato",
-                "age": 21,
-                "email": "ricepotato40@gmail.com",
-            },
-        }
+        self.current_id = 0
+        self.data = {}
 
     def add(self, name: str, age: int, email: str) -> int:
         if name in self.data:
