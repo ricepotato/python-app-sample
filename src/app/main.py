@@ -39,6 +39,8 @@ def main():
     log.info(f"clsobj.add res={res}")
 
     services = Services()
+    services.db.add("sukjun", 19, "sukjun40@naver.com")
+    services.db.add("ricepotato", 21, "ricepotato40@gmail.com")
     task = MailTask(services)
     task.send_mail_to_all("hello", "world")
 
